@@ -22,6 +22,17 @@ const fetchPokemon = async (pokemon) => {
     }
 }
 
+const showInfo = (name, id, weight, image) => {
+    const nameCard = document.getElementById("Card-title");
+    const weightCard = document.getElementById("Weight");
+    const idCard = document.getElementById("Id");
+    const imageCard = document.getElementById("image-Card");
+    nameCard.innerHTML= name;
+    weightCard.innerHTML= `Weight: ${weight}`;
+    idCard.innerHTML= `ID: ${id}`;
+    imageCard.src = image;
+}    
+
 // Obtener pokemon
 document.getElementById('get-btn')
     .addEventListener('click', async () => {
@@ -34,6 +45,7 @@ document.getElementById('get-btn')
         console.log(pokemon.weight);
         console.log(pokemon.id);
         console.log(pokemon.sprites.front_default);
+        showInfo(pokemon.name,pokemon.weight,pokemon.id,pokemon.sprites.front_default);
     })
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -60,6 +72,7 @@ document.getElementById('previous-btn').addEventListener('click', async () => {
         console.log(pokemon.id);
         console.log(pokemon.sprites.front_default);
         localStorage.setItem('currentPokeId', pokemon.id);
+        showInfo(pokemon.name,pokemon.weight,pokemon.id,pokemon.sprites.front_default);
     })
 
 // obtener el siguiente
@@ -75,7 +88,9 @@ document.getElementById('next-btn').addEventListener('click', async () => {
         console.log(pokemon.id);
         console.log(pokemon.sprites.front_default);
         localStorage.setItem("currentPokeId", pokemon.id);
+        showInfo(pokemon.name,pokemon.weight,pokemon.id,pokemon.sprites.front_default);
     })
+
 
 
 ////////////////// POST
