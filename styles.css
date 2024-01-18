@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: 'Karla', sans-serif;
-    background-color: #14141c;
+    background-color: #fa5102;
     color: white;
     text-align: center;
     padding: 40px;
@@ -13,7 +13,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #1a1b26;
+    background-color: #4e4d53;
     padding: 20px;
     border-radius: 20px;
 }

@@ -27,7 +27,7 @@ const showInfo = (name, id, weight, image) => {
     const weightCard = document.getElementById("Weight");
     const idCard = document.getElementById("Id");
     const imageCard = document.getElementById("image-Card");
-    nameCard.innerHTML= name;
+    nameCard.innerHTML= `Name: ${name}` ;
     weightCard.innerHTML= `Weight: ${weight}`;
     idCard.innerHTML= `ID: ${id}`;
     imageCard.src = image;
